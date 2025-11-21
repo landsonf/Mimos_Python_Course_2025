@@ -1,0 +1,27 @@
+todo_list = []
+
+while True:
+  if todo_list is []:
+    print("Your ToDo list is empty")
+  else:
+    index = 1
+    for task in todo_list:
+      print(f"{index}. {task}")
+      index = index + 1
+  print(f"Options:")
+  print(f"1) Add Task")
+  print(f"2) Remove Task")
+  print(f"3) Quit")
+  choice = input()
+  if choice == "1":
+    new_task = input("enter the task:")
+    todo_list.append(new_task)
+    print("Adding task")
+  elif choice == "2":
+    if todo_list == []:
+      print("To Do List is Empty!")
+    else:
+      new_list = todo_list.pop()
+  elif choice == "3":
+    print("Quitting")
+    break
